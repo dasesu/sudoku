@@ -40,19 +40,14 @@ bool is_valid(int j, int i, int number){
    return true;
 }
 
-
-
 bool solveSudoku(int jj, int ii){
-
     if (jj == 9 - 1 && ii == 9){
         return true;
     }
-
     if (ii == 9) {
         jj++;
         ii = 0;
     }
-
     // si esta posicion ya esta asignada la salto.
     if (sudoku[jj][ii] > 0){
         return solveSudoku(jj, ii+1);
@@ -70,11 +65,6 @@ bool solveSudoku(int jj, int ii){
     }
     return false;
 }
-
-
-
-
-
 
 
 int main(){
